@@ -1,40 +1,26 @@
 import * as path from "https://deno.land/std/path/mod.ts";
-import { exists } from "https://deno.land/std@0.224.0/fs/mod.ts";
 
-const userHomePath = Deno.env.get("APPDATA");
-if (!userHomePath) {
-  throw (new Error("Environment Variable 'APPDATA' is not set"));
+import obsConfig from "./scenes/base_config.json" with { type: "json" };
+import { addScene, SceneType } from "./obsConfig.ts";
+
+const cwd = Deno.cwd();
+
+const output_directory = path.join(cwd, "output");
+const output_path = path.join(output_directory, "S4-Generated.json");
+
+try {
+  await Deno.mkdir(output_directory);
+} catch {
+  // Do Nothing, I hate it.  What if the error is for something weird?
 }
 
-const sceneFolderPath = path.join(userHomePath, "\\obs-studio\\basic\\scenes");
-const backupSceneFolderPath = path.join(
-  userHomePath,
-  "\\obs-studio\\basic\\s4-backup-scenes",
+await Deno.create(output_path);
+
+const updatedConfig = addScene(
+  "Slot 1 - Lebull",
+  SceneType.Stream,
+  "rtmp://stream.vrcdn.live/live/lebull",
+  obsConfig,
 );
 
-const sceneFiles: string[] = [];
-for await (const file of Deno.readDir(sceneFolderPath)) {
-  if (file.name.endsWith(".json")) {
-    sceneFiles.push(file.name);
-  }
-}
-
-if (sceneFiles.length !== 1) {
-  throw (new Error(
-    `Expected exactly 1 configuration file to be present, but found ${sceneFiles.length}`,
-  ));
-}
-
-const sceneFilepath = path.join(sceneFolderPath, sceneFiles[0]);
-const backupSceneFilepath = path.join(
-  backupSceneFolderPath,
-  `${sceneFiles[0]}.${Date.now().toString()}.bak`,
-);
-
-if (!exists(backupSceneFolderPath)) {
-  await Deno.mkdir(backupSceneFolderPath);
-}
-
-await Deno.copyFile(sceneFilepath, backupSceneFilepath);
-
-console.log(sceneFilepath);
+await Deno.writeTextFile(output_path, JSON.stringify(updatedConfig));
