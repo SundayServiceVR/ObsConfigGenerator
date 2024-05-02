@@ -69,17 +69,7 @@
     },
     "current_scene": "Example 3 - Raw Video",
     "current_program_scene": "Example 3 - Raw Video",
-    "scene_order": [
-        {
-            "name": "Example 1 - Twitch"
-        },
-        {
-            "name": "Example 2 - RTMP(VRCDN)"
-        },
-        {
-            "name": "Example 3 - Raw Video"
-        }
-    ],
+    "scene_order": [],
     "name": "Sunday Service - (Date)",
     "groups": [],
     "quick_transitions": [

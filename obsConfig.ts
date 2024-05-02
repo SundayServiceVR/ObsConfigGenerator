@@ -20,6 +20,7 @@ export function addScene(
   //Add the Source
   const source = createMediaSource(sourceName, type, link);
   config.sources.push(source);
+  config.scene_order.push({ name });
 
   //Add the scene
   const id = "scene";
