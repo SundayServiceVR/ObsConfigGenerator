@@ -1,0 +1,957 @@
+{
+    "DesktopAudioDevice1": {
+        "prev_ver": 503382017,
+        "name": "Desktop Audio",
+        "uuid": "bbeff2ab-eda6-4fc0-82ad-bdafa94a017a",
+        "id": "wasapi_output_capture",
+        "versioned_id": "wasapi_output_capture",
+        "settings": {
+            "device_id": "default"
+        },
+        "mixers": 255,
+        "sync": 0,
+        "flags": 0,
+        "volume": 0.0,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": false,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": []
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {}
+    },
+    "AuxAudioDevice1": {
+        "prev_ver": 503382017,
+        "name": "Mic/Aux",
+        "uuid": "d7b44935-b4ef-4a7d-b43c-0b4813881d1a",
+        "id": "wasapi_input_capture",
+        "versioned_id": "wasapi_input_capture",
+        "settings": {
+            "device_id": "default"
+        },
+        "mixers": 255,
+        "sync": 0,
+        "flags": 0,
+        "volume": 0.0,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": false,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": []
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {}
+    },
+    "current_scene": "Scene 1 - Lebull",
+    "current_program_scene": "Scene 1 - Lebull",
+    "scene_order": [
+        {
+            "name": "Scene 1 - Lebull"
+        }
+    ],
+    "name": "Test",
+    "groups": [],
+    "quick_transitions": [
+        {
+            "name": "Cut",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 1,
+            "fade_to_black": false
+        },
+        {
+            "name": "Fade",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 2,
+            "fade_to_black": false
+        },
+        {
+            "name": "Fade",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 3,
+            "fade_to_black": true
+        }
+    ],
+    "transitions": [],
+    "saved_projectors": [],
+    "current_transition": "Fade",
+    "transition_duration": 1000,
+    "preview_locked": false,
+    "scaling_enabled": false,
+    "scaling_level": 0,
+    "scaling_off_x": 0.0,
+    "scaling_off_y": 0.0,
+    "virtual-camera": {
+        "type2": 3
+    },
+    "modules": {
+        "scripts-tool": [],
+        "output-timer": {
+            "streamTimerHours": 0,
+            "streamTimerMinutes": 0,
+            "streamTimerSeconds": 30,
+            "recordTimerHours": 0,
+            "recordTimerMinutes": 0,
+            "recordTimerSeconds": 30,
+            "autoStartStreamTimer": false,
+            "autoStartRecordTimer": false,
+            "pauseRecordTimer": true
+        },
+        "auto-scene-switcher": {
+            "interval": 300,
+            "non_matching_scene": "",
+            "switch_if_not_matching": false,
+            "active": false,
+            "switches": []
+        },
+        "captions": {
+            "source": "",
+            "enabled": false,
+            "lang_id": 1033,
+            "provider": "mssapi"
+        },
+        "advanced-scene-switcher": {
+            "sceneGroups": [],
+            "macroProperties": {
+                "highlightExecuted": false,
+                "highlightConditions": false,
+                "highlightActions": false,
+                "newMacroRegisterHotkey": false
+            },
+            "macros": [
+                {
+                    "name": "Start",
+                    "pause": true,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "timer",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "type": 0,
+                            "duration": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "duration2": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "remaining": 0.0,
+                            "saveRemaining": false,
+                            "paused": false,
+                            "oneshot": true,
+                            "version": 1
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "variable",
+                            "enabled": true,
+                            "variableName": "Target Slot",
+                            "variable2Name": "Invalid varialbe selection",
+                            "strValue": "1",
+                            "numValue": 0.0,
+                            "condition": 0,
+                            "segmentIdx": -1,
+                            "subStringStart": 0,
+                            "subStringSize": 0,
+                            "regexPattern": ".*",
+                            "regexMatchIdx": 0,
+                            "findStr": "Text to find",
+                            "replaceStr": "Text to replace with",
+                            "regexConfig": {
+                                "enable": false,
+                                "partial": true,
+                                "options": 0
+                            },
+                            "mathExpression": "( 1 + 2 * 3 ) / 4",
+                            "useCustomPrompt": false,
+                            "inputPrompt": "Assign value to variable:",
+                            "useInputPlaceholder": false,
+                            "inputPlaceholder": "--enter text--",
+                            "environmentVariableName": "USERPROFILE",
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "tempVar": {
+                                "type": 0,
+                                "idx": -1,
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "elseActions": []
+                },
+                {
+                    "name": "Target Slot 1 Play - Video Trigger",
+                    "pause": true,
+                    "parallel": true,
+                    "onChange": false,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "process",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "process": "vlc.exe",
+                            "focus": false,
+                            "regexConfig": {
+                                "enable": false,
+                                "partial": true,
+                                "options": 0
+                            },
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "scene",
+                            "logic": 101,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "type": 10,
+                            "pattern": ".*Scene.*",
+                            "useTransitionTargetScene": false,
+                            "version": 1
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene_switch",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "transitionType": 1,
+                            "duration": {
+                                "value": {
+                                    "value": 4.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
+                        }
+                    ],
+                    "elseActions": []
+                },
+                {
+                    "name": "Target Slot 1 Fallback",
+                    "pause": true,
+                    "parallel": true,
+                    "onChange": false,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "type": 10,
+                            "pattern": ".*Scene.*",
+                            "useTransitionTargetScene": false,
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "video",
+                            "logic": 103,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.10000000000000001,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "videoInputData": {
+                                "type": 1,
+                                "source": {
+                                    "type": 0,
+                                    "name": ""
+                                },
+                                "sceneSelection": {
+                                    "type": 0,
+                                    "name": ""
+                                }
+                            },
+                            "condition": 7,
+                            "filePath": "--enter path--",
+                            "blockUntilScreenshotDone": false,
+                            "brightnessThreshold": {
+                                "value": 0.029999999999999999,
+                                "type": 0
+                            },
+                            "patternMatchData": {
+                                "useForChangedCheck": false,
+                                "threshold": {
+                                    "value": 0.80000000000000004,
+                                    "type": 0
+                                },
+                                "useAlphaAsMask": false,
+                                "matchMode": 3,
+                                "version": 1
+                            },
+                            "objectMatchData": {
+                                "modelPath": "../../data/obs-plugins/advanced-scene-switcher/res/cascadeClassifiers/haarcascade_frontalface_alt.xml",
+                                "scaleFactor": {
+                                    "value": 1.1000000000000001,
+                                    "type": 0
+                                },
+                                "minNeighbors": 3,
+                                "minSize": {
+                                    "width": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "height": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "version": 1
+                                },
+                                "maxSize": {
+                                    "width": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "height": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "version": 1
+                                },
+                                "version": 1
+                            },
+                            "ocrData": {
+                                "pattern": "--enter text--",
+                                "regexConfig": {
+                                    "enable": false,
+                                    "partial": true,
+                                    "options": 0
+                                },
+                                "language": "eng",
+                                "textColor": {
+                                    "red": 0,
+                                    "green": 0,
+                                    "blue": 0
+                                },
+                                "colorThreshold": {
+                                    "value": 0.29999999999999999,
+                                    "type": 0
+                                },
+                                "pageSegMode": 6,
+                                "version": 1
+                            },
+                            "colorData": {
+                                "color": {
+                                    "red": 0,
+                                    "green": 0,
+                                    "blue": 0
+                                },
+                                "colorThreshold": {
+                                    "value": 0.10000000000000001,
+                                    "type": 0
+                                },
+                                "matchThreshold": {
+                                    "value": 0.80000000000000004,
+                                    "type": 0
+                                }
+                            },
+                            "throttleEnabled": false,
+                            "throttleCount": 3,
+                            "areaData": {
+                                "enabled": false,
+                                "area": {
+                                    "x": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "y": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "width": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "height": {
+                                        "value": 0,
+                                        "type": 0
+                                    },
+                                    "version": 1
+                                }
+                            }
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene_switch",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "transitionType": 1,
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "blockUntilTransitionDone": false,
+                            "sceneType": 0
+                        }
+                    ],
+                    "elseActions": []
+                },
+                {
+                    "name": "Clock",
+                    "pause": true,
+                    "parallel": false,
+                    "onChange": false,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "websocket",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "type": 1,
+                            "message": "--enter text--",
+                            "regexConfig": {
+                                "enable": true,
+                                "partial": false,
+                                "options": 0
+                            },
+                            "connection": "Invalid connection selection"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "variable",
+                            "enabled": true,
+                            "variableName": "Invalid varialbe selection",
+                            "variable2Name": "Invalid varialbe selection",
+                            "strValue": "",
+                            "numValue": 0.0,
+                            "condition": 0,
+                            "segmentIdx": -1,
+                            "subStringStart": 0,
+                            "subStringSize": 0,
+                            "regexPattern": ".*",
+                            "regexMatchIdx": 0,
+                            "findStr": "Text to find",
+                            "replaceStr": "Text to replace with",
+                            "regexConfig": {
+                                "enable": false,
+                                "partial": true,
+                                "options": 0
+                            },
+                            "mathExpression": "( 1 + 2 * 3 ) / 4",
+                            "useCustomPrompt": false,
+                            "inputPrompt": "Assign value to variable:",
+                            "useInputPlaceholder": false,
+                            "inputPlaceholder": "--enter text--",
+                            "environmentVariableName": "USERPROFILE",
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "tempVar": {
+                                "type": 0,
+                                "idx": -1,
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "elseActions": []
+                }
+            ],
+            "variables": [
+                {
+                    "name": "Target Slot",
+                    "saveAction": 1,
+                    "value": "C:\\Users\\bulld",
+                    "defaultValue": ""
+                }
+            ],
+            "switches": [],
+            "ignoreWindows": [],
+            "screenRegion": [],
+            "pauseEntries": [],
+            "sceneRoundTrip": [],
+            "sceneTransitions": [],
+            "defaultTransitions": [],
+            "defTransitionDelay": 0,
+            "ignoreIdleWindows": [],
+            "idleTargetType": 0,
+            "idleSceneName": "",
+            "idleTransitionName": "",
+            "idleEnable": false,
+            "idleTime": 60,
+            "executableSwitches": [],
+            "randomSwitches": [],
+            "fileSwitches": [],
+            "readEnabled": false,
+            "readPath": "",
+            "writeEnabled": false,
+            "writePath": "",
+            "mediaSwitches": [],
+            "timeSwitches": [],
+            "audioSwitches": [],
+            "audioFallbackTargetType": 0,
+            "audioFallbackScene": "",
+            "audioFallbackTransition": "",
+            "audioFallbackEnable": false,
+            "audioFallbackDuration": {
+                "value": {
+                    "value": 0.0,
+                    "type": 0
+                },
+                "unit": 0,
+                "version": 1
+            },
+            "videoSwitches": [],
+            "ServerEnabled": false,
+            "ServerPort": 55555,
+            "LockToIPv4": false,
+            "ClientEnabled": false,
+            "Address": "",
+            "ClientPort": 55555,
+            "SendSceneChange": true,
+            "SendSceneChangeAll": true,
+            "SendPreview": true,
+            "triggers": [],
+            "interval": 300,
+            "non_matching_scene": "",
+            "switch_if_not_matching": 0,
+            "noMatchDelay": {
+                "value": {
+                    "value": 5.0,
+                    "type": 0
+                },
+                "unit": 0,
+                "version": 1
+            },
+            "cooldown": {
+                "value": {
+                    "value": 0.0,
+                    "type": 0
+                },
+                "unit": 0,
+                "version": 1
+            },
+            "active": false,
+            "startup_behavior": 1,
+            "autoStartEvent": 0,
+            "verbose": false,
+            "showSystemTrayNotifications": false,
+            "disableHints": false,
+            "disableFilterComboboxFilter": false,
+            "warnPluginLoadFailure": true,
+            "hideLegacyTabs": true,
+            "priority0": 10,
+            "priority1": 0,
+            "priority2": 2,
+            "priority3": 8,
+            "priority4": 6,
+            "priority5": 9,
+            "priority6": 7,
+            "priority7": 4,
+            "priority8": 1,
+            "priority9": 5,
+            "priority10": 3,
+            "threadPriority": 3,
+            "transitionOverrideOverride": false,
+            "adjustActiveTransitionType": true,
+            "lastImportPath": "",
+            "startHotkey": [],
+            "stopHotkey": [],
+            "toggleHotkey": [],
+            "upMacroSegmentHotkey": [],
+            "downMacroSegmentHotkey": [],
+            "removeMacroSegmentHotkey": [],
+            "generalTabPos": 0,
+            "macroTabPos": 1,
+            "transitionTabPos": 15,
+            "pauseTabPos": 16,
+            "titleTabPos": 2,
+            "exeTabPos": 3,
+            "regionTabPos": 4,
+            "mediaTabPos": 5,
+            "fileTabPos": 6,
+            "randomTabPos": 7,
+            "timeTabPos": 8,
+            "idleTabPos": 9,
+            "sequenceTabPos": 10,
+            "audioTabPos": 11,
+            "videoTabPos": 12,
+            "networkTabPos": 13,
+            "sceneGroupTabPos": 14,
+            "triggerTabPos": 17,
+            "saveWindowGeo": false,
+            "windowPosX": 650,
+            "windowPosY": 195,
+            "windowWidth": 1000,
+            "windowHeight": 600,
+            "macroListMacroEditSplitterPosition": [
+                {
+                    "pos": 143
+                },
+                {
+                    "pos": 492
+                }
+            ],
+            "version": "267855fded058e22e682bf2888c822fb419d8b55",
+            "twitchConnections": [],
+            "connections": []
+        }
+    },
+    "sources": [
+        {
+            "prev_ver": 503382017,
+            "name": "Media Source 3",
+            "uuid": "a20b4732-5f9b-4f95-acb8-93997a805c2b",
+            "id": "ffmpeg_source",
+            "versioned_id": "ffmpeg_source",
+            "settings": {
+                "input": "rtmp://stream.vrcdn.live/live/lebull",
+                "input_format": "rtmp",
+                "is_local_file": false
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Play": [],
+                "MediaSource.Pause": [],
+                "MediaSource.Stop": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 503382017,
+            "name": "Scene 1 - Lebull",
+            "uuid": "6c2c0971-5a38-4dc7-bb4c-d34dae0157ea",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 5,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Media Source 3",
+                        "source_uuid": "a20b4732-5f9b-4f95-acb8-93997a805c2b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        }
+    ]
+}

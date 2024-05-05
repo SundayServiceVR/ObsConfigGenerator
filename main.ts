@@ -1,7 +1,7 @@
 import * as path from "https://deno.land/std/path/mod.ts";
 
-import obsConfig from "./scenes/base_config.json" with { type: "json" };
-import { addScene, SceneType } from "./obsConfig.ts";
+import { S4ObsConfig } from "./src/obsConfig.ts";
+import { SceneType } from "./src/obsConfig.ts";
 
 const cwd = Deno.cwd();
 
@@ -16,11 +16,23 @@ try {
 
 await Deno.create(output_path);
 
-const updatedConfig = addScene(
-  "Slot 1 - Lebull",
+const s4Config = new S4ObsConfig(
+  name = `Sunday Service (${new Date(Date.now()).toDateString()})`,
+);
+s4Config.addScene(
+  "Lebull",
   SceneType.Stream,
   "rtmp://stream.vrcdn.live/live/lebull",
-  obsConfig,
+);
+s4Config.addScene(
+  "Frosty",
+  SceneType.Stream,
+  "rtmp://stream.vrcdn.live/live/lebull",
+);
+s4Config.addScene(
+  "Strawbs",
+  SceneType.Stream,
+  "rtmp://stream.vrcdn.live/live/strawbs",
 );
 
-await Deno.writeTextFile(output_path, JSON.stringify(updatedConfig));
+await Deno.writeTextFile(output_path, s4Config.getConfig());

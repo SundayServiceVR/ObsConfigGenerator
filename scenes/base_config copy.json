@@ -1,8 +1,8 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 503382017,
+        "prev_ver": 503316480,
         "name": "Desktop Audio",
-        "uuid": "bbeff2ab-eda6-4fc0-82ad-bdafa94a017a",
+        "uuid": "fa9aabf7-dd90-4b90-aa58-a4119db82cfe",
         "id": "wasapi_output_capture",
         "versioned_id": "wasapi_output_capture",
         "settings": {
@@ -28,16 +28,19 @@
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
         "monitoring_type": 0,
-        "private_settings": {}
+        "private_settings": {
+            "mixer_hidden": true,
+            "volume_locked": true
+        }
     },
     "AuxAudioDevice1": {
-        "prev_ver": 503382017,
+        "prev_ver": 503316480,
         "name": "Mic/Aux",
-        "uuid": "d7b44935-b4ef-4a7d-b43c-0b4813881d1a",
+        "uuid": "dbfbcdad-1d01-43d1-a5ba-69948150f9a0",
         "id": "wasapi_input_capture",
         "versioned_id": "wasapi_input_capture",
         "settings": {
-            "device_id": "default"
+            "device_id": "{0.0.1.00000000}.{d61ab840-2dfe-4267-b71a-bffbc02b9105}"
         },
         "mixers": 255,
         "sync": 0,
@@ -59,12 +62,15 @@
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
         "monitoring_type": 0,
-        "private_settings": {}
+        "private_settings": {
+            "mixer_hidden": true,
+            "volume_locked": true
+        }
     },
-    "current_scene": null,
-    "current_program_scene": null,
+    "current_scene": "Example 3 - Raw Video",
+    "current_program_scene": "Example 3 - Raw Video",
     "scene_order": [],
-    "name": null,
+    "name": "Sunday Service - (Date)",
     "groups": [],
     "quick_transitions": [
         {
@@ -92,7 +98,7 @@
     "transitions": [],
     "saved_projectors": [],
     "current_transition": "Fade",
-    "transition_duration": 1000,
+    "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
     "scaling_level": 0,
@@ -113,13 +119,6 @@
             "autoStartStreamTimer": false,
             "autoStartRecordTimer": false,
             "pauseRecordTimer": true
-        },
-        "auto-scene-switcher": {
-            "interval": 300,
-            "non_matching_scene": "",
-            "switch_if_not_matching": false,
-            "active": false,
-            "switches": []
         },
         "captions": {
             "source": "",
