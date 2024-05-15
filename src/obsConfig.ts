@@ -24,7 +24,10 @@ export class S4ObsConfig {
   public addScene(
     name: string,
     type: SceneType,
-    link: string,
+    /**
+     * Either the stream url, twitch username, or raw filepath
+     */
+    sourceValue: string,
   ) {
     if (this.config.current_scene === null) {
       this.config.current_scene = name;
@@ -33,7 +36,7 @@ export class S4ObsConfig {
 
     //Create and Add the Source
     const sourceName = `${type} Source - ${name}`;
-    const source = createMediaSource(sourceName, type, link);
+    const source = createMediaSource(sourceName, type, sourceValue);
     this.config.sources.push(source);
 
     this.config.scene_order.push({ name });
@@ -115,16 +118,30 @@ export class S4ObsConfig {
   }
 }
 
-function getSettingsForScenetype(type: SceneType, link: string) {
+function getSettingsForScenetype(type: SceneType, sourceValue: string) {
   if (type === SceneType.Stream) {
     return {
       id: "ffmpeg_source",
       version_id: "ffmpeg_source",
       settings: {
-        "input": link,
+        "input": sourceValue,
         "input_format": "rtmp",
         "hw_decode": true,
         "is_local_file": false,
+      },
+    };
+  }
+
+  if (type === SceneType.Twitch) {
+    return {
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "settings": {
+        "url": `https://www.twitch.tv/${sourceValue}/embed?frameborder="0"`,
+        "width": 1920,
+        "height": 1080,
+        "fps_custom": false,
+        "reroute_audio": true,
       },
     };
   }
