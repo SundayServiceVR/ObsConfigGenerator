@@ -1,13 +1,12 @@
-import { ObsSceneConfig } from "../types.d.ts";
 import base_config from "../scenes/base_config.json" with { type: "json" };
 
 // deno-lint-ignore no-explicit-any
 export type ObsSceneConfig = any;
 
 export enum SceneType {
-  Twitch = "Twitch",
-  Stream = "Stream",
-  PreRecord = "PreRecord",
+  Twitch = "TWITCH",
+  Stream = "RTMP",
+  PreRecord = "PRERECORD",
 }
 export class S4ObsConfig {
   config: ObsSceneConfig;
@@ -118,13 +117,13 @@ export class S4ObsConfig {
   }
 }
 
-function getSettingsForScenetype(type: SceneType, sourceValue: string) {
+function getSettingsForScenetype(type: SceneType, mediaSourceUrl: string) {
   if (type === SceneType.Stream) {
     return {
       id: "ffmpeg_source",
       version_id: "ffmpeg_source",
       settings: {
-        "input": sourceValue,
+        "input": mediaSourceUrl,
         "input_format": "rtmp",
         "hw_decode": true,
         "is_local_file": false,
@@ -137,7 +136,7 @@ function getSettingsForScenetype(type: SceneType, sourceValue: string) {
       "id": "browser_source",
       "versioned_id": "browser_source",
       "settings": {
-        "url": `https://www.twitch.tv/${sourceValue}/embed?frameborder="0"`,
+        "url": mediaSourceUrl,
         "width": 1920,
         "height": 1080,
         "fps_custom": false,
