@@ -11,3 +11,16 @@ Commands needed to implement
 
 - Open the appdata s4vr folder
 - Open the expected OBS scene collection folder
+
+# Things we have yet to implement
+
+- Convert google drive direct link
+- Convert dropbox link
+- YTDLP for youtube
+- Predownload prerecords and store them in our appdata
+- Build into a binary in GHA and distribute
+- Audio Only Sets
+
+# Nice-to-have
+
+- Mac Support
