@@ -33,38 +33,6 @@ export async function getCurrentS4SceneCollections(): Promise<Deno.DirEntry[]> {
   return result;
 }
 
-// export async function generateTestSceneCollection() {
-//   const output_path = path.join(
-//     obsSceneCollectionFolder,
-//     `${sceneCollectionPrefix}-${Date.now().toString()}.json`,
-//   );
-
-//   await Deno.create(output_path);
-
-//   const s4Config = new S4ObsConfig(
-//     name = `S4VR (Generated ${new Date(Date.now()).toDateString()}-${
-//       new Date(Date.now()).toLocaleTimeString()
-//     })`,
-//   );
-//   s4Config.addScene(
-//     "Lebull",
-//     SceneType.Stream,
-//     "rtmp://stream.vrcdn.live/live/lebull",
-//   );
-//   s4Config.addScene(
-//     "Frosty",
-//     SceneType.Stream,
-//     "rtmp://stream.vrcdn.live/live/lebull",
-//   );
-//   s4Config.addScene(
-//     "TwitchPlaysPokemon",
-//     SceneType.Twitch,
-//     "twitchplayspokemon",
-//   );
-
-//   await Deno.writeTextFile(output_path, s4Config.getConfig());
-// }
-
 export async function generateSceneCollectionFromWhiteboard() {
   const whiteboard = await getWhiteboardSlotsMapped();
 
@@ -80,6 +48,8 @@ export async function generateSceneCollectionFromWhiteboard() {
       new Date(Date.now()).toLocaleTimeString()
     })`,
   );
+
+  console.log(`Generating Scene Collection: ${s4Config.config.name}`);
 
   whiteboard.forEach((slot: any) => {
     s4Config.addScene(

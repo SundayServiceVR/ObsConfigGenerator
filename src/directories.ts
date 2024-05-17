@@ -16,22 +16,26 @@ export async function createDirectories() {
 // TODO:  I think this is the only thing blocking mac compatibility,
 // and I know at least one person streams from a mac.
 export const obsSceneCollectionFolder = path.join(
-  Deno.env.get("APPDATA"),
+  Deno.env.get("APPDATA") ??
+    "~/Library/Application Support/obs-studio/basic/scenes",
   "\\obs-studio\\basic\\scenes",
 );
 
 export const s4vrSceneCollectionArchiveFolder = path.join(
-  Deno.env.get("APPDATA"),
+  Deno.env.get("APPDATA") ??
+    "~/Library/Application Support/obs-studio/basic/scenes",
   "\\s4vr\\archives\\sceneCollections",
 );
 
 export const s4vrPreRecordsFolder = path.join(
-  Deno.env.get("APPDATA"),
+  Deno.env.get("APPDATA") ??
+    "~/Library/Application Support/obs-studio/basic/scenes",
   "\\s4vr\\prerecords",
 );
 
 export const s4vrSceneCollectionAssetsFolder = path.join(
-  Deno.env.get("APPDATA"),
+  Deno.env.get("APPDATA") ??
+    "~/Library/Application Support/obs-studio/basic/scenes",
   "\\s4vr\\sceneColletions\\assets",
 );
 

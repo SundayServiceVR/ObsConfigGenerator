@@ -6,7 +6,11 @@ import { createDirectories } from "./src/directories.ts";
 import { generateSceneCollectionFromWhiteboard } from "./src/obsSceneCollectionManagement.ts";
 import { copySceneCollectionAssets } from "./src/assetsManagement.ts";
 
-createDirectories();
-copySceneCollectionAssets();
-archiveCurrentS4SceneCollections();
+prompt("Make sure to close OBS, then press enter.");
+
+await createDirectories();
+await copySceneCollectionAssets();
+await archiveCurrentS4SceneCollections();
 await generateSceneCollectionFromWhiteboard();
+
+console.log("Done");
