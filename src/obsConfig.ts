@@ -145,6 +145,16 @@ function getSettingsForScenetype(type: SceneType, mediaSourceUrl: string) {
     };
   }
 
+  if (type === SceneType.PreRecord) {
+    return {
+      "settings": {
+        "is_local_file": false,
+        "input": mediaSourceUrl,
+        "input_format": "mp4",
+      },
+    };
+  }
+
   throw new Error("Unsupported scene type");
 }
 

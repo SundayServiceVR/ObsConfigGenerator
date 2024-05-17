@@ -1,6 +1,8 @@
 {
   "version": "3",
   "redirects": {
+    "https://deno.land/std/fs/copy.ts": "https://deno.land/std@0.224.0/fs/copy.ts",
+    "https://deno.land/std/io/copy.ts": "https://deno.land/std@0.224.0/io/copy.ts",
     "https://deno.land/std/path/mod.ts": "https://deno.land/std@0.224.0/path/mod.ts"
   },
   "remote": {
