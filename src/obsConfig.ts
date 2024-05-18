@@ -21,6 +21,7 @@ export class S4ObsConfig {
   }
 
   public addScene(
+    index: number,
     name: string,
     type: SceneType,
     /**
@@ -28,24 +29,29 @@ export class S4ObsConfig {
      */
     sourceValue: string,
   ) {
+    const calculatedName = `${index + 1}. ${name} (${
+      sourceValue === "" ? "MANUAL SOURCE " : ""
+    }${type.toLocaleLowerCase()})`;
+
     if (this.config.current_scene === null) {
-      this.config.current_scene = name;
-      this.config.current_program_scene = name;
+      this.config.current_scene = calculatedName;
+      this.config.current_program_scene = calculatedName;
     }
 
-    //Create and Add the Source
-    const sourceName = `${type} Source - ${name}`;
+    //Create and Add the
+    const sourceName = `${name} - ${type}`;
     const source = createMediaSource(sourceName, type, sourceValue);
     this.config.sources.push(source);
 
-    this.config.scene_order.push({ name });
+    this.config.scene_order.push({ name: calculatedName });
+    console.log(this.config.scene_order.toString());
 
     //Add the scene
     // const id = name;
     const uuid = crypto.randomUUID();
     this.config.sources.push({
       "prev_ver": 503316480,
-      "name": name,
+      "name": calculatedName,
       "uuid": uuid,
       "id": "scene",
       "version_id": "scene",

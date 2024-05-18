@@ -51,8 +51,9 @@ export async function generateSceneCollectionFromWhiteboard() {
 
   console.log(`Generating Scene Collection: ${s4Config.config.name}`);
 
-  whiteboard.forEach((slot: any) => {
+  whiteboard.forEach((slot: any, index: number) => {
     s4Config.addScene(
+      index,
       slot.dj.name,
       slot.slotType,
       slot.mediaSourceUrl,
