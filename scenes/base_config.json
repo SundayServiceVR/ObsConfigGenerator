@@ -61,17 +61,17 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "Fallback",
-    "current_program_scene": "Fallback",
+    "current_scene": "--(Do Not Stream Directly) Optional Goodies--",
+    "current_program_scene": "--(Do Not Stream Directly) Optional Goodies--",
     "scene_order": [
-        {
-            "name": "--(Do Not Stream Directly) Optional Goodies--"
-        },
         {
             "name": "AreYouReadyForLove"
         },
         {
             "name": "Fallback"
+        },
+        {
+            "name": "--(Do Not Stream Directly) Optional Goodies--"
         }
     ],
     "name": "Test - S4",
@@ -89,9 +89,9 @@
                 "cy": 1080,
                 "items": [
                     {
-                        "name": "Text (GDI+)",
-                        "source_uuid": "db771c13-abba-455e-ae06-7d7409070176",
-                        "visible": false,
+                        "name": "S4Bot",
+                        "source_uuid": "2546ba2b-2bfd-41ae-b484-aeb072620b69",
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -103,7 +103,7 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 1,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
@@ -114,11 +114,11 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 8,
+                        "id": 5,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
-                        "blend_type": "normal",
+                        "blend_type": "multiply",
                         "show_transition": {
                             "duration": 0
                         },
@@ -169,11 +169,11 @@
                     {
                         "name": "Top Text",
                         "source_uuid": "53186601-3feb-41bf-989e-6f78b714b88c",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 615.0,
+                            "x": 730.45819091796875,
                             "y": 34.0
                         },
                         "scale": {
@@ -219,8 +219,8 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "libobs.show_scene_item.8": [],
-                "libobs.hide_scene_item.8": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
                 "libobs.show_scene_item.9": [],
                 "libobs.hide_scene_item.9": [],
                 "libobs.show_scene_item.21": [],
@@ -1017,9 +1017,9 @@
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "Text (GDI+)",
-                        "source_uuid": "db771c13-abba-455e-ae06-7d7409070176",
-                        "visible": false,
+                        "name": "S4Bot",
+                        "source_uuid": "2546ba2b-2bfd-41ae-b484-aeb072620b69",
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -1031,7 +1031,7 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 1,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
@@ -1042,11 +1042,11 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 8,
+                        "id": 5,
                         "group_item_backup": true,
                         "scale_filter": "disable",
                         "blend_method": "default",
-                        "blend_type": "normal",
+                        "blend_type": "multiply",
                         "show_transition": {
                             "duration": 0
                         },
@@ -1097,11 +1097,11 @@
                     {
                         "name": "Top Text",
                         "source_uuid": "53186601-3feb-41bf-989e-6f78b714b88c",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 615.0,
+                            "x": 730.45819091796875,
                             "y": 34.0
                         },
                         "scale": {
@@ -1173,45 +1173,6 @@
                         "private_settings": {
                             "collapsed": false
                         }
-                    },
-                    {
-                        "name": "S4Bot",
-                        "source_uuid": "2546ba2b-2bfd-41ae-b484-aeb072620b69",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 2,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
                     }
                 ]
             },
@@ -1229,9 +1190,7 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.3": [],
-                "libobs.hide_scene_item.3": [],
-                "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": []
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1317,7 +1276,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 7,
+                "id_counter": 8,
                 "custom_size": false,
                 "items": [
                     {
@@ -1360,8 +1319,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Media Source 2",
-                        "source_uuid": "a6b3c964-24b3-465e-90f9-3f7af7319113",
+                        "name": "Media Source 3",
+                        "source_uuid": "3d4dc292-cd07-4fc8-8027-a8517aeceef0",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -1370,8 +1329,8 @@
                             "y": 0.0
                         },
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.92166668176651001,
+                            "y": 0.92166668176651001
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -1385,7 +1344,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 7,
+                        "id": 8,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -1415,8 +1374,8 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.1": [],
                 "libobs.hide_scene_item.1": [],
-                "libobs.show_scene_item.7": [],
-                "libobs.hide_scene_item.7": []
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1458,7 +1417,9 @@
             "settings": {
                 "input": "https://drive.google.com/uc?export=download&id=1k0Vd1ciDm9Ny_o9QjQvLOOkaq8GqNsHP",
                 "input_format": "mp4",
-                "is_local_file": false
+                "is_local_file": false,
+                "clear_on_media_end": false,
+                "restart_on_activate": true
             },
             "mixers": 255,
             "sync": 0,
@@ -1488,15 +1449,19 @@
         },
         {
             "prev_ver": 503382017,
-            "name": "Media Source 2",
-            "uuid": "a6b3c964-24b3-465e-90f9-3f7af7319113",
+            "name": "Media Source 3",
+            "uuid": "3d4dc292-cd07-4fc8-8027-a8517aeceef0",
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
-            "settings": {},
+            "settings": {
+                "local_file": "C:/Users/bulld/projects/ObsConfigGenerator/sceneCollectionAssets/01-01 Opus No. 1.flac",
+                "looping": true,
+                "clear_on_media_end": false
+            },
             "mixers": 255,
             "sync": 0,
             "flags": 0,
-            "volume": 1.0,
+            "volume": 0.37569737434387207,
             "balance": 0.5,
             "enabled": true,
             "muted": false,
@@ -1517,7 +1482,35 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
-            "private_settings": {}
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 503382017,
+                    "name": "Color Correction",
+                    "uuid": "dcf64d23-93db-45d7-b91e-9657564c4023",
+                    "id": "color_filter",
+                    "versioned_id": "color_filter_v2",
+                    "settings": {
+                        "opacity": 0.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         },
         {
             "prev_ver": 503382017,
@@ -1553,10 +1546,12 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "input": "rtmp://stream.vrcdn.live/live/strawberryprotato",
+                "input": "rtmp://stream.vrcdn.live/live/prootatobot",
                 "input_format": "rtmp",
                 "hw_decode": true,
-                "is_local_file": false
+                "is_local_file": false,
+                "clear_on_media_end": false,
+                "restart_on_activate": false
             },
             "mixers": 255,
             "sync": 0,
@@ -1616,52 +1611,15 @@
         },
         {
             "prev_ver": 503382017,
-            "name": "Text (GDI+)",
-            "uuid": "db771c13-abba-455e-ae06-7d7409070176",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "Happy Birthday, Gabasso!!!",
-                "outline": false,
-                "extents": false,
-                "chatlog": false,
-                "font": {
-                    "face": "Book Antiqua",
-                    "style": "Regular",
-                    "size": 256,
-                    "flags": 0
-                },
-                "align": "center",
-                "bk_color": 4278190080,
-                "bk_opacity": 73
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 503382017,
             "name": "Top Text",
             "uuid": "53186601-3feb-41bf-989e-6f78b714b88c",
             "id": "text_gdiplus",
             "versioned_id": "text_gdiplus_v2",
             "settings": {
-                "text": "This is example text.",
+                "text": "Example Text",
                 "chatlog": false,
                 "read_from_file": false,
+                "outline": false,
                 "font": {
                     "face": "Yu Gothic UI",
                     "style": "Regular",
