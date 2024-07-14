@@ -3,9 +3,10 @@ import {
   obsSceneCollectionFolder,
   s4vrSceneCollectionArchiveFolder,
   sceneCollectionPrefix,
-} from "./directories.ts";
-import { S4ObsConfig } from "./obsConfig.ts";
-import { getWhiteboardSlotsMapped } from "./whiteboard.ts";
+} from "./folderManagement.ts";
+import { S4ObsConfig } from "./util/classes.ts";
+import { getWhiteboard } from "./whiteboard.ts";
+import { SceneType } from "./util/types.ts";
 
 export async function archiveCurrentS4SceneCollections() {
   const currentSceneCollections = await getCurrentS4SceneCollections();
@@ -33,8 +34,21 @@ export async function getCurrentS4SceneCollections(): Promise<Deno.DirEntry[]> {
   return result;
 }
 
+function getSourceUrlFromSlot(slot: any) {
+  switch (slot.slot_type) {
+    case "RTMP":
+      return slot.rtmp_url;
+    case "TWITCH":
+      return `https://twitch.tv/${slot.twitch_username}/embed?frameborder="0"`;
+    case "PRERECORD":
+      return slot.prerecord_url;
+    default:
+      return ""; // Will be notaded with MANUAL SOURCE
+  }
+}
+
 export async function generateSceneCollectionFromWhiteboard() {
-  const whiteboard = await getWhiteboardSlotsMapped();
+  const whiteboard = (await getWhiteboard()).event.slots;
 
   const output_path = path.join(
     obsSceneCollectionFolder,
@@ -54,9 +68,9 @@ export async function generateSceneCollectionFromWhiteboard() {
   whiteboard.forEach((slot: any, index: number) => {
     s4Config.addScene(
       index,
-      slot.dj.name,
-      slot.slotType,
-      slot.mediaSourceUrl,
+      slot.dj_name,
+      slot.slot_type ?? SceneType.Unknown,
+      getSourceUrlFromSlot(slot),
     );
   });
 
