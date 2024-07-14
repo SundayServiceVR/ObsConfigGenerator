@@ -39,7 +39,7 @@ function getSourceUrlFromSlot(slot: any) {
     case "RTMP":
       return slot.rtmp_url;
     case "TWITCH":
-      return `https://witch.tv/${slot.twitch_username}/embed?frameborder="0"`;
+      return `https://twitch.tv/${slot.twitch_username}/embed?frameborder="0"`;
     case "PRERECORD":
       return slot.prerecord_url;
     default:
