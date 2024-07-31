@@ -1389,7 +1389,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "C:/Users/bulld/AppData/Roaming/s4vr/sceneColletions/assets/s4-thinking.png"
+                "file": "%SCENE_ASSET_PATH%/s4-thinking.png"
             },
             "mixers": 0,
             "sync": 0,
@@ -1454,7 +1454,7 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "local_file": "C:/Users/bulld/projects/ObsConfigGenerator/sceneCollectionAssets/01-01 Opus No. 1.flac",
+                "local_file": "%SCENE_ASSET_PATH%/01-01 Opus No. 1.flac",
                 "looping": true,
                 "clear_on_media_end": false
             },
@@ -1519,7 +1519,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "Z:/creative/dj_branding/S4/bBlAk3Fw.png",
+                "file": "%SCENE_ASSET_PATH%/bBlAk3Fw.png",
                 "undo_uuid": "a5031d35-36d0-49f0-a069-0927feb2527f"
             },
             "mixers": 0,

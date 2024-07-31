@@ -18,25 +18,25 @@ export async function createDirectories() {
 export const obsSceneCollectionFolder = path.join(
   Deno.env.get("APPDATA") ??
     "~/Library/Application Support/obs-studio/basic/scenes",
-  "\\obs-studio\\basic\\scenes",
+  "/obs-studio/basic/scenes",
 );
 
 export const s4vrSceneCollectionArchiveFolder = path.join(
   Deno.env.get("APPDATA") ??
     "~/Library/Application Support/obs-studio/basic/scenes",
-  "\\s4vr\\archives\\sceneCollections",
+  "/s4vr/archives/sceneCollections",
 );
 
 export const s4vrPreRecordsFolder = path.join(
   Deno.env.get("APPDATA") ??
     "~/Library/Application Support/obs-studio/basic/scenes",
-  "\\s4vr\\prerecords",
+  "/s4vr/prerecords",
 );
 
 export const s4vrSceneCollectionAssetsFolder = path.join(
   Deno.env.get("APPDATA") ??
     "~/Library/Application Support/obs-studio/basic/scenes",
-  "\\s4vr\\sceneColletions\\assets",
+  "/s4vr/sceneCollections/assets",
 );
 
 export const localSceneCollectionAssetsFolder = "./sceneCollectionAssets";
