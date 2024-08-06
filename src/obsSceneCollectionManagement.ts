@@ -5,7 +5,7 @@ import {
   sceneCollectionPrefix,
 } from "./folderManagement.ts";
 import { S4ObsConfig } from "./util/classes.ts";
-import { getWhiteboard } from "./whiteboard.ts";
+import { getNextEvent } from "./whiteboard.ts";
 import { SceneType } from "./util/types.ts";
 
 export async function archiveCurrentS4SceneCollections() {
@@ -48,7 +48,7 @@ function getSourceUrlFromSlot(slot: any) {
 }
 
 export async function generateSceneCollectionFromWhiteboard() {
-  const whiteboard = (await getWhiteboard()).event.slots;
+  const nextEventSlots = (await getNextEvent()).slots;
 
   const output_path = path.join(
     obsSceneCollectionFolder,
@@ -65,7 +65,7 @@ export async function generateSceneCollectionFromWhiteboard() {
 
   console.log(`Generating Scene Collection: ${s4Config.config.name}`);
 
-  whiteboard.forEach((slot: any, index: number) => {
+  nextEventSlots.forEach((slot: any, index: number) => {
     s4Config.addScene(
       index,
       slot.dj_name,
