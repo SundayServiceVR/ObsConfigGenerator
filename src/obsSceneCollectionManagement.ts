@@ -1,7 +1,7 @@
 import * as path from "https://deno.land/std/path/mod.ts";
 import {
   obsSceneCollectionFolder,
-  s4vrSceneCollectionArchiveFolder,
+  s4vrSceneCollectionArchiveFolder, s4vrSceneCollectionAssetsFolder,
   sceneCollectionPrefix,
 } from "./folderManagement.ts";
 import { S4ObsConfig } from "./util/classes.ts";
@@ -74,5 +74,7 @@ export async function generateSceneCollectionFromWhiteboard() {
     );
   });
 
-  await Deno.writeTextFile(output_path, s4Config.getConfig());
+  // We need to replace all asset paths from the template config with the user's actual working directory (independent of OS).
+  // We additionally need to escape all backslashes for Windows to keep valid JSON.
+  await Deno.writeTextFile(output_path, s4Config.getConfig().replaceAll("%SCENE_ASSET_PATH%", s4vrSceneCollectionAssetsFolder.replaceAll('\\','\\\\')));
 }
