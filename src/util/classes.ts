@@ -11,7 +11,7 @@ export class S4ObsConfig {
   config: ObsSceneConfig;
 
   constructor(name: string) {
-    this.config = { ...base_config };
+    this.config = { ...base_config, "sources": [...endingSong.sources, ...intermissionBumper.sources, ...overlay.sources, ...source_s4LogoAnimated.sources] };
     this.config.name = name;
   }
 
