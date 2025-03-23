@@ -9,7 +9,7 @@
       "settings": {
         "is_local_file": true,
         "restart_when_active": true,
-        "local_file": "%SCENE_ASSET_PATH%/s4vr/sceneCollections/assets/s4-logo-spin.svg"
+        "local_file": "%SCENE_ASSET_PATH%/s4-logo-spin.svg"
       },
       "mixers": 255,
       "sync": 0,

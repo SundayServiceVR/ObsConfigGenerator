@@ -243,7 +243,7 @@
       "id": "image_source",
       "versioned_id": "image_source",
       "settings": {
-        "file": "%SCENE_ASSET_PATH%/s4vr/sceneCollections/assets/church-bg.png"
+        "file": "%SCENE_ASSET_PATH%/church-bg.png"
       },
       "mixers": 0,
       "sync": 0,
