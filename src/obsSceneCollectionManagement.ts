@@ -63,6 +63,8 @@ export async function generateSceneCollectionFromWhiteboard() {
     })`,
   );
 
+  await s4Config.mergeCustomScenes()
+
   console.log(`Generating Scene Collection: ${s4Config.config.name}`);
 
   nextEventSlots.forEach((slot: any, index: number) => {
