@@ -1,0 +1,369 @@
+{
+  "sources": [
+    {
+      "prev_ver": 503447555,
+      "name": "--(Do Not Stream Directly) Optional Goodies--",
+      "uuid": "df9563f9-9306-4c77-947d-ece4d2b120fa",
+      "id": "scene",
+      "versioned_id": "scene",
+      "settings": {
+        "id_counter": 15,
+        "custom_size": false,
+        "items": [
+          {
+            "name": "S4 Bot Feed",
+            "source_uuid": "73788b35-a850-4799-a40e-6e8d9808ea13",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 0.0,
+              "y": 229.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 2,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 1280.0,
+              "y": 720.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 13,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {
+            }
+          },
+          {
+            "name": "S4 Logo Animated",
+            "source_uuid": "3b6a0d84-107b-4985-8de2-4376e02d92fa",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 1145.0,
+              "y": 606.0
+            },
+            "scale": {
+              "x": 0.181250005960464,
+              "y": 0.181666672229767
+            },
+            "align": 5,
+            "bounds_type": 0,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 6,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {
+            }
+          },
+          {
+            "name": "Twitch Chat",
+            "source_uuid": "13789bfa-c9c2-4141-a291-264695e74c59",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 0,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 14,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {
+            }
+          },
+          {
+            "name": "Twitch Emoji",
+            "source_uuid": "d6554366-802e-46dd-9f74-a95c6bf1d851",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 0,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 15,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {
+            }
+          }
+        ]
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "OBSBasic.SelectScene": [
+        ],
+        "libobs.show_scene_item.13": [
+        ],
+        "libobs.hide_scene_item.13": [
+        ],
+        "libobs.show_scene_item.6": [
+        ],
+        "libobs.hide_scene_item.6": [
+        ],
+        "libobs.show_scene_item.14": [
+        ],
+        "libobs.hide_scene_item.14": [
+        ],
+        "libobs.show_scene_item.15": [
+        ],
+        "libobs.hide_scene_item.15": [
+        ]
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {
+      }
+    },
+    {
+      "prev_ver": 503447555,
+      "name": "S4 Bot Feed",
+      "uuid": "73788b35-a850-4799-a40e-6e8d9808ea13",
+      "id": "ffmpeg_source",
+      "versioned_id": "ffmpeg_source",
+      "settings": {
+        "input": "rtmp://stream.vrcdn.live/live/prootatobot",
+        "input_format": "rtmp",
+        "is_local_file": false
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 0.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": true,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "libobs.mute": [
+        ],
+        "libobs.unmute": [
+        ],
+        "libobs.push-to-mute": [
+        ],
+        "libobs.push-to-talk": [
+        ],
+        "MediaSource.Restart": [
+        ],
+        "MediaSource.Play": [
+        ],
+        "MediaSource.Pause": [
+        ],
+        "MediaSource.Stop": [
+        ]
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {
+      },
+      "filters": [
+        {
+          "prev_ver": 503447555,
+          "name": "Chroma Key",
+          "uuid": "f059de22-8b80-4c18-b6ce-8a4dc4879d87",
+          "id": "chroma_key_filter",
+          "versioned_id": "chroma_key_filter_v2",
+          "settings": {
+            "opacity": 0.666
+          },
+          "mixers": 0,
+          "sync": 0,
+          "flags": 0,
+          "volume": 1.0,
+          "balance": 0.5,
+          "enabled": true,
+          "muted": false,
+          "push-to-mute": false,
+          "push-to-mute-delay": 0,
+          "push-to-talk": false,
+          "push-to-talk-delay": 0,
+          "hotkeys": {
+          },
+          "deinterlace_mode": 0,
+          "deinterlace_field_order": 0,
+          "monitoring_type": 0,
+          "private_settings": {
+          }
+        }
+      ]
+    },
+    {
+      "prev_ver": 503447555,
+      "name": "Twitch Chat",
+      "uuid": "13789bfa-c9c2-4141-a291-264695e74c59",
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "settings": {
+        "url": "https://nightdev.com/hosted/obschat?theme=clear&channel=SundayServiceSpinning&fade=false&bot_activity=false&prevent_clipping=true",
+        "width": 300,
+        "height": 720
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "libobs.mute": [
+        ],
+        "libobs.unmute": [
+        ],
+        "libobs.push-to-mute": [
+        ],
+        "libobs.push-to-talk": [
+        ],
+        "ObsBrowser.Refresh": [
+        ]
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {
+      }
+    },
+    {
+      "prev_ver": 503447555,
+      "name": "Twitch Emoji",
+      "uuid": "d6554366-802e-46dd-9f74-a95c6bf1d851",
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "settings": {
+        "url": "https://streamelements.com/overlay/679ff4661cc72d00a41b00d5/thCu7dk4ytceV9IHfEt6IuLXhMDDqzUcgCd6BaHMIqztf26-",
+        "width": 1280,
+        "height": 720
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 0.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": true,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "libobs.mute": [
+        ],
+        "libobs.unmute": [
+        ],
+        "libobs.push-to-mute": [
+        ],
+        "libobs.push-to-talk": [
+        ],
+        "ObsBrowser.Refresh": [
+        ]
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {
+      }
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+    "sources": [
+        {
+      "prev_ver": 503447554,
+      "name": "Intermission/Bumper",
+      "uuid": "f19accbe-eefb-4676-8853-b6420061011a",
+      "id": "scene",
+      "versioned_id": "scene",
+      "settings": {
+        "id_counter": 13,
+        "custom_size": false,
+        "items": [
+          {
+            "name": "Bumper Music",
+            "source_uuid": "ae433cf0-a7b5-4e3a-ae12-b828cad7895a",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 0,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 9,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {}
+          },
+          {
+            "name": "Church Background",
+            "source_uuid": "13665a88-e0fe-488b-8ba5-18bed6f6a565",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 2,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 1280.0,
+              "y": 720.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 11,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {}
+          },
+          {
+            "name": "S4 Logo Animated",
+            "source_uuid": "3b6a0d84-107b-4985-8de2-4376e02d92fa",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+              "x": 240.0,
+              "y": 60.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 0,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 10,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+              "duration": 0
+            },
+            "hide_transition": {
+              "duration": 0
+            },
+            "private_settings": {}
+          },
+          {
+            "name": "Bumper Top Text",
+            "source_uuid": "cf3df62e-f349-459f-b27d-1fc1ef84fcf4",
+            "visible": true,
+            "locked": false,
+            "rot": 0.0,
+            "pos": {
+                "x": 0.0,
+                "y": 18.5
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "align": 5,
+            "bounds_type": 6,
+            "bounds_align": 0,
+            "bounds_crop": false,
+            "bounds": {
+                "x": 1280.0,
+                "y": 85.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "id": 12,
+            "group_item_backup": false,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal",
+            "show_transition": {
+                "duration": 0
+            },
+            "hide_transition": {
+                "duration": 0
+            },
+            "private_settings": {}
+          }
+        ]
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "OBSBasic.SelectScene": [],
+        "libobs.show_scene_item.9": [],
+        "libobs.hide_scene_item.9": [],
+        "libobs.show_scene_item.1": [],
+        "libobs.hide_scene_item.1": [],
+        "libobs.show_scene_item.8": [],
+        "libobs.hide_scene_item.8": [],
+        "libobs.show_scene_item.11": [],
+        "libobs.hide_scene_item.11": [],
+        "libobs.show_scene_item.10": [],
+        "libobs.hide_scene_item.10": [],
+        "libobs.show_scene_item.12": [],
+        "libobs.hide_scene_item.12": [],
+        "libobs.show_scene_item.13": [],
+        "libobs.hide_scene_item.13": []
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+        {
+      "prev_ver": 503447554,
+      "name": "Bumper Music",
+      "uuid": "ae433cf0-a7b5-4e3a-ae12-b828cad7895a",
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "settings": {
+        "url": "https://www.youtube.com/watch?v=PhJOz21PCMo",
+        "shutdown": false,
+        "restart_when_active": false,
+        "reroute_audio": true
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 0.77604568004608154,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "libobs.mute": [],
+        "libobs.unmute": [],
+        "libobs.push-to-mute": [],
+        "libobs.push-to-talk": [],
+        "ObsBrowser.Refresh": []
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+        {
+      "prev_ver": 503447554,
+      "name": "Church Background",
+      "uuid": "13665a88-e0fe-488b-8ba5-18bed6f6a565",
+      "id": "image_source",
+      "versioned_id": "image_source",
+      "settings": {
+        "file": "%SCENE_ASSET_PATH%/s4vr/sceneCollections/assets/church-bg.png"
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {},
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {},
+      "filters": [
+        {
+          "prev_ver": 503447554,
+          "name": "Color Correction",
+          "uuid": "e7f21f6b-c0c9-4e6a-9821-89c8d1fc0084",
+          "id": "color_filter",
+          "versioned_id": "color_filter_v2",
+          "settings": {
+            "gamma": -0.13,
+            "contrast": 0.0,
+            "brightness": 0.0,
+            "saturation": -0.20000000000000001
+          },
+          "mixers": 0,
+          "sync": 0,
+          "flags": 0,
+          "volume": 1.0,
+          "balance": 0.5,
+          "enabled": true,
+          "muted": false,
+          "push-to-mute": false,
+          "push-to-mute-delay": 0,
+          "push-to-talk": false,
+          "push-to-talk-delay": 0,
+          "hotkeys": {},
+          "deinterlace_mode": 0,
+          "deinterlace_field_order": 0,
+          "monitoring_type": 0,
+          "private_settings": {}
+        }
+      ]
+    },
+        {
+      "prev_ver": 503447554,
+      "name": "Bumper Top Text",
+      "uuid": "cf3df62e-f349-459f-b27d-1fc1ef84fcf4",
+      "id": "text_gdiplus",
+      "versioned_id": "text_gdiplus_v2",
+      "settings": {
+        "chatlog": false,
+        "read_from_file": false,
+        "outline": false,
+        "text": "Please stand by, fuzzy creature on decks",
+        "font": {
+          "face": "Jost",
+          "style": "Regular",
+          "size": 72,
+          "flags": 0
+        },
+        "align": "center",
+        "color": 4294967295,
+        "bk_opacity": 20,
+        "outline_size": 2,
+        "outline_color": 4278190080,
+        "outline_opacity": 100
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {},
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {}
+    }
+    ]
+}

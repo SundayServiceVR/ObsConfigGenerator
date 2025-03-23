@@ -1,0 +1,38 @@
+{
+    "sources": [
+        {
+      "prev_ver": 503447554,
+      "name": "S4 Logo Animated",
+      "uuid": "3b6a0d84-107b-4985-8de2-4376e02d92fa",
+      "id": "browser_source",
+      "versioned_id": "browser_source",
+      "settings": {
+        "is_local_file": true,
+        "restart_when_active": true,
+        "local_file": "%SCENE_ASSET_PATH%/s4vr/sceneCollections/assets/s4-logo-spin.svg"
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "enabled": true,
+      "muted": false,
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "hotkeys": {
+        "libobs.mute": [],
+        "libobs.unmute": [],
+        "libobs.push-to-mute": [],
+        "libobs.push-to-talk": [],
+        "ObsBrowser.Refresh": []
+      },
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0,
+      "private_settings": {}
+    }
+    ]
+}
