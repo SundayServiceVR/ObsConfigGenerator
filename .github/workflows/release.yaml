@@ -1,6 +1,15 @@
 name: Release
 on:
-  workflow_dispatch 
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: "Type of version bump (major, minor, patch)"
+        required: true
+        default: "patch"
+      release_notes:
+        description: "Release notes for this version"
+        required: true
+        default: "No release notes provided."
 
 jobs:
   release:
@@ -20,22 +29,43 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Increment version
+        id: increment_version
+        run: |
+          VERSION=$(deno eval 'const fs = Deno.readTextFileSync("deno.json"); const json = JSON.parse(fs); console.log(json.version);')
+          VERSION_TYPE="${{ github.event.inputs.version_type }}"
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          if [ "$VERSION_TYPE" = "major" ]; then
+            MAJOR=$((MAJOR + 1))
+            MINOR=0
+            PATCH=0
+          elif [ "$VERSION_TYPE" = "minor" ]; then
+            MINOR=$((MINOR + 1))
+            PATCH=0
+          elif [ "$VERSION_TYPE" = "patch" ]; then
+            PATCH=$((PATCH + 1))
+          else
+            echo "Invalid version type: $VERSION_TYPE"
+            exit 1
+          fi
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          echo "New version: $NEW_VERSION"
+          echo "VERSION=$NEW_VERSION" >> $GITHUB_ENV
+          deno eval "const fs = Deno.readTextFileSync('deno.json'); const json = JSON.parse(fs); json.version = '$NEW_VERSION'; Deno.writeTextFileSync('deno.json', JSON.stringify(json, null, 2));"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add deno.json
+          git commit -m "Bump version to $NEW_VERSION"
+          git push
+
       - name: Build step
         run: "deno compile --output=app main.ts"
-
-      - name: Get version from deno.json
-        id: get_version
-        run: |
-          VERSION=$(deno eval 'console.log(JSON.parse(Deno.readTextFileSync("deno.json")).version)')
-          echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.VERSION }}
           release_name: Release ${{ env.VERSION }}
-          body: |
-            Changes in this release:
-            - Built Deno application
+          body: ${{ github.event.inputs.release_notes }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
