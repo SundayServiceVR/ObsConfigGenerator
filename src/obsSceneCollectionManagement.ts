@@ -1,7 +1,8 @@
 import * as path from "https://deno.land/std/path/mod.ts";
 import {
   obsSceneCollectionFolder,
-  s4vrSceneCollectionArchiveFolder, s4vrSceneCollectionAssetsFolder,
+  s4vrSceneCollectionArchiveFolder,
+  s4vrSceneCollectionAssetsFolder,
   sceneCollectionPrefix,
 } from "./folderManagement.ts";
 import { S4ObsConfig } from "./util/classes.ts";
@@ -35,11 +36,11 @@ export async function getCurrentS4SceneCollections(): Promise<Deno.DirEntry[]> {
 }
 
 function getSourceUrlFromSlot(slot: any) {
-  switch (slot.slot_type) {
+  switch (slot.stream_source_type) {
     case "RTMP":
-      return slot.rtmp_url;
+      return slot.stream_source_url;
     case "TWITCH":
-      return `https://twitch.tv/${slot.twitch_username}/embed?frameborder="0"`;
+      return `${slot.stream_source_url}/embed?frameborder="0"`;
     case "PRERECORD":
       return slot.prerecord_url;
     default:
@@ -68,13 +69,19 @@ export async function generateSceneCollectionFromWhiteboard() {
   nextEventSlots.forEach((slot: any, index: number) => {
     s4Config.addScene(
       index,
-      slot.dj_name,
-      slot.slot_type ?? SceneType.Unknown,
+      slot.name,
+      slot.stream_source_type ?? SceneType.Unknown,
       getSourceUrlFromSlot(slot),
     );
   });
 
   // We need to replace all asset paths from the template config with the user's actual working directory (independent of OS).
   // We additionally need to escape all backslashes for Windows to keep valid JSON.
-  await Deno.writeTextFile(output_path, s4Config.getConfig().replaceAll("%SCENE_ASSET_PATH%", s4vrSceneCollectionAssetsFolder.replaceAll('\\','\\\\')));
+  await Deno.writeTextFile(
+    output_path,
+    s4Config.getConfig().replaceAll(
+      "%SCENE_ASSET_PATH%",
+      s4vrSceneCollectionAssetsFolder.replaceAll("\\", "\\\\"),
+    ),
+  );
 }

@@ -1427,7 +1427,7 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "input": "https://drive.google.com/uc?export=download&id=1k0Vd1ciDm9Ny_o9QjQvLOOkaq8GqNsHP",
+                "input": "%SCENE_ASSET_PATH%/end_video.mp4",
                 "input_format": "mp4",
                 "is_local_file": false,
                 "clear_on_media_end": false,
@@ -1631,7 +1631,7 @@
       "settings": {
         "is_local_file": true,
         "restart_when_active": true,
-        "local_file": "C:/Users/rossp/AppData/Roaming/s4vr/sceneCollections/assets/s4-logo-spin.svg"
+        "local_file": "%SCENE_ASSET_PATH%/s4-logo-spin.svg"
       },
       "mixers": 255,
       "sync": 0,
@@ -1663,7 +1663,7 @@
       "id": "image_source",
       "versioned_id": "image_source",
       "settings": {
-        "file": "C:/Users/rossp/AppData/Roaming/s4vr/sceneCollections/assets/church-bg.png"
+        "file": "%SCENE_ASSET_PATH%/church-bg.png"
       },
       "mixers": 0,
       "sync": 0,
