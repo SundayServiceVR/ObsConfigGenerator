@@ -1,0 +1,44 @@
+name: Release
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Build step
+        run: "deno compile --output=app main.ts"
+
+      - name: Get version from deno.json
+        id: get_version
+        run: |
+          VERSION=$(deno eval 'console.log(JSON.parse(Deno.readTextFileSync("deno.json")).version)')
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.VERSION }}
+          release_name: Release ${{ env.VERSION }}
+          body: |
+            Changes in this release:
+            - Built Deno application
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
