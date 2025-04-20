@@ -1,5 +1,12 @@
 import * as path from "https://deno.land/std/path/mod.ts";
 
+const roamingPath = Deno.env.get("APPDATA") ?? "~/Library/Application Support";
+
+export const rootRoamingS4Path = path.join(
+  roamingPath,
+  "/s4vr/",
+);
+
 export const sceneCollectionPrefix = "Sunday_Service";
 
 export async function createDirectories() {
@@ -16,27 +23,23 @@ export async function createDirectories() {
 // TODO:  I think this is the only thing blocking mac compatibility,
 // and I know at least one person streams from a mac.
 export const obsSceneCollectionFolder = path.join(
-  Deno.env.get("APPDATA") ??
-    "~/Library/Application Support/obs-studio/basic/scenes",
+  roamingPath,
   "/obs-studio/basic/scenes",
 );
 
 export const s4vrSceneCollectionArchiveFolder = path.join(
-  Deno.env.get("APPDATA") ??
-    "~/Library/Application Support/obs-studio/basic/scenes",
-  "/s4vr/archives/sceneCollections",
+  rootRoamingS4Path,
+  "/archives/sceneCollections",
 );
 
 export const s4vrPreRecordsFolder = path.join(
-  Deno.env.get("APPDATA") ??
-    "~/Library/Application Support/obs-studio/basic/scenes",
-  "/s4vr/prerecords",
+  rootRoamingS4Path,
+  "/prerecords",
 );
 
 export const s4vrSceneCollectionAssetsFolder = path.join(
-  Deno.env.get("APPDATA") ??
-    "~/Library/Application Support/obs-studio/basic/scenes",
-  "/s4vr/sceneCollections/assets",
+  rootRoamingS4Path,
+  "/sceneCollections/assets",
 );
 
 export const localSceneCollectionAssetsFolder = "./sceneCollectionAssets";

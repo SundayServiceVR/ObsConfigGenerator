@@ -7,7 +7,7 @@ import {
   localSceneCollectionAssetsFolder,
   s4vrPreRecordsFolder,
   s4vrSceneCollectionAssetsFolder,
-} from "./folderManagement.ts";
+} from "./filepaths.ts";
 
 export async function copySceneCollectionAssets() {
   await copy(
@@ -20,7 +20,7 @@ export async function copySceneCollectionAssets() {
   );
 }
 
-export async function downloadMp4ToAssetsFolder(
+export async function downloadMediaRecource(
   source_url: string,
   output_filename: string,
   destination: "ASSETS" | "PRERECORDS" = "PRERECORDS",
@@ -29,7 +29,6 @@ export async function downloadMp4ToAssetsFolder(
     ? s4vrSceneCollectionAssetsFolder
     : s4vrPreRecordsFolder;
 
-  // Use path.join instead of string concatenation
   const outputFilePath = join(destinationDir, output_filename);
 
   // Check if the file already exists
@@ -38,6 +37,7 @@ export async function downloadMp4ToAssetsFolder(
     return;
   }
 
+  console.log(`Downloading media resource ${source_url} to ${outputFilePath}`);
   // Download the file if it doesn't exist
   const downloadedFile = await download(source_url, {
     file: output_filename,
@@ -45,4 +45,5 @@ export async function downloadMp4ToAssetsFolder(
   });
 
   console.log(`File downloaded to: ${downloadedFile.fullPath}`);
+  return downloadedFile;
 }

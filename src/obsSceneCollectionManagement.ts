@@ -4,7 +4,7 @@ import {
   s4vrSceneCollectionArchiveFolder,
   s4vrSceneCollectionAssetsFolder,
   sceneCollectionPrefix,
-} from "./folderManagement.ts";
+} from "./filepaths.ts";
 import { S4ObsConfig } from "./util/classes.ts";
 import { getNextEvent } from "./whiteboard.ts";
 import { SceneType } from "./util/types.ts";
