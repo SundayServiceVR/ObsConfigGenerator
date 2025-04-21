@@ -62,13 +62,11 @@ export const downloadPrerecords = async () => {
 
     console.log(`${slot.name} - download at ${direct_source_url}`);
 
-    // const resultFile = await downloadMediaRecource(
-    //   direct_source_url,
-    //   sanitizedSlotName,
-    //   "PRERECORDS",
-    // );
-
-    const resultFile = null;
+    const resultFile = await downloadMediaRecource(
+      direct_source_url,
+      sanitizedSlotName,
+      "PRERECORDS",
+    );
 
     prerecords.push({
       name: slot.name,
