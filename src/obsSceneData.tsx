@@ -78,7 +78,7 @@ export function getSettingsForScenetype(
   type: SceneType,
   mediaSourceUrl: string,
 ) {
-  if (type === SceneType.Stream) {
+  if (type === SceneType.Stream || type === SceneType.VRCDN) {
     return {
       "id": "ffmpeg_source",
       "version_id": "ffmpeg_source",
@@ -99,8 +99,8 @@ export function getSettingsForScenetype(
       "versioned_id": "browser_source",
       "settings": {
         "url": mediaSourceUrl,
-        "width": 1920,
-        "height": 1080,
+        "width": 1280,
+        "height": 720,
         "fps_custom": false,
         "reroute_audio": true,
       },
@@ -131,7 +131,7 @@ export function getSettingsForScenetype(
     };
   }
 
-  throw new Error("Unsupported scene type");
+  throw new Error(`Unsupported scene type: ${type}`);
 }
 
 export function createMediaSource(name: string, sceneSettings: any) {

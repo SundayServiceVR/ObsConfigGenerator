@@ -15,6 +15,7 @@ import * as path from "https://deno.land/std/path/mod.ts";
 import { exists } from "https://deno.land/std/fs/exists.ts";
 import { openDataFolder } from "./util/executors.ts";
 import { downloadPrerecords } from "./prerecordManagement.ts";
+import { copyTemplateFile } from "./templateManagement.ts"; // Import the function
 
 async function cleanupArchives() {
   const archiveFolder = s4vrSceneCollectionArchiveFolder;
@@ -40,14 +41,16 @@ async function generateWeeklySceneCollection() {
     "end_video.mp4",
     "ASSETS",
   );
+
   console.log("Archiving old scene collections");
   await archiveCurrentS4SceneCollections();
-  console.log("Archiving old scene collections");
+
   await generateSceneCollectionFromWhiteboard();
   console.log("Weekly Scene Collection generated.");
 }
 
 export async function cli() {
+  const isDevelopmentMode = true; // Check if running via `deno task`
   await createDirectories();
   while (true) {
     console.log("\n=== Sunday Service ObsConfigGenerator ===");
@@ -55,6 +58,9 @@ export async function cli() {
     console.log("2. Cleanup Archives");
     console.log("3. Open data folder");
     console.log("4. Download prerecords");
+    if (isDevelopmentMode) {
+      console.log("5. Bake Template File");
+    }
     console.log("q. Quit");
     const input = prompt("Enter your choice: ");
     switch (input) {
@@ -73,6 +79,13 @@ export async function cli() {
           null,
           4,
         ));
+        break;
+      case "5":
+        if (isDevelopmentMode) {
+          await copyTemplateFile();
+        } else {
+          console.log("Invalid option.");
+        }
         break;
       case "q":
         console.log("Exiting...");

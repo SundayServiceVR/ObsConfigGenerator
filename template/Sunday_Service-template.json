@@ -1,0 +1,211 @@
+{
+    "prev_ver": 520093700,
+    "name": "--(Do Not Stream Directly) Optional Goodies--",
+    "uuid": "df9563f9-9306-4c77-947d-ece4d2b120fa",
+    "id": "scene",
+    "versioned_id": "scene",
+    "settings": {
+        "id_counter": 15,
+        "custom_size": false,
+        "items": [
+            {
+                "name": "S4 Bot Feed",
+                "source_uuid": "73788b35-a850-4799-a40e-6e8d9808ea13",
+                "visible": true,
+                "locked": false,
+                "rot": 0,
+                "scale_ref": {
+                    "x": 1280,
+                    "y": 720
+                },
+                "align": 5,
+                "bounds_type": 2,
+                "bounds_align": 0,
+                "bounds_crop": false,
+                "crop_left": 0,
+                "crop_top": 0,
+                "crop_right": 0,
+                "crop_bottom": 0,
+                "id": 13,
+                "group_item_backup": false,
+                "pos": {
+                    "x": 0,
+                    "y": 229
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                },
+                "bounds": {
+                    "x": 1280,
+                    "y": 720
+                },
+                "scale_filter": "disable",
+                "blend_method": "default",
+                "blend_type": "normal",
+                "show_transition": {
+                    "duration": 0
+                },
+                "hide_transition": {
+                    "duration": 0
+                },
+                "private_settings": {}
+            },
+            {
+                "name": "S4 Logo Animated",
+                "source_uuid": "3b6a0d84-107b-4985-8de2-4376e02d92fa",
+                "visible": true,
+                "locked": false,
+                "rot": 0,
+                "scale_ref": {
+                    "x": 1280,
+                    "y": 720
+                },
+                "align": 5,
+                "bounds_type": 0,
+                "bounds_align": 0,
+                "bounds_crop": false,
+                "crop_left": 0,
+                "crop_top": 0,
+                "crop_right": 0,
+                "crop_bottom": 0,
+                "id": 6,
+                "group_item_backup": false,
+                "pos": {
+                    "x": 1145,
+                    "y": 606
+                },
+                "scale": {
+                    "x": 0.18125000596046448,
+                    "y": 0.18166667222976685
+                },
+                "bounds": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale_filter": "disable",
+                "blend_method": "default",
+                "blend_type": "normal",
+                "show_transition": {
+                    "duration": 0
+                },
+                "hide_transition": {
+                    "duration": 0
+                },
+                "private_settings": {}
+            },
+            {
+                "name": "Chat",
+                "source_uuid": "583c9a24-9553-48a3-81df-fb70f1993fd0",
+                "visible": true,
+                "locked": false,
+                "rot": 0,
+                "scale_ref": {
+                    "x": 1280,
+                    "y": 720
+                },
+                "align": 5,
+                "bounds_type": 0,
+                "bounds_align": 0,
+                "bounds_crop": false,
+                "crop_left": 0,
+                "crop_top": 0,
+                "crop_right": 0,
+                "crop_bottom": 0,
+                "id": 15,
+                "group_item_backup": false,
+                "pos": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                },
+                "bounds": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale_filter": "disable",
+                "blend_method": "default",
+                "blend_type": "normal",
+                "show_transition": {
+                    "duration": 0
+                },
+                "hide_transition": {
+                    "duration": 0
+                },
+                "private_settings": {}
+            },
+            {
+                "name": "Emotes",
+                "source_uuid": "9c609778-231d-44d2-a1cd-c02acc51acd3",
+                "visible": true,
+                "locked": false,
+                "rot": 0,
+                "scale_ref": {
+                    "x": 1280,
+                    "y": 720
+                },
+                "align": 5,
+                "bounds_type": 0,
+                "bounds_align": 0,
+                "bounds_crop": false,
+                "crop_left": 0,
+                "crop_top": 0,
+                "crop_right": 0,
+                "crop_bottom": 0,
+                "id": 14,
+                "group_item_backup": false,
+                "pos": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                },
+                "bounds": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale_filter": "disable",
+                "blend_method": "default",
+                "blend_type": "normal",
+                "show_transition": {
+                    "duration": 0
+                },
+                "hide_transition": {
+                    "duration": 0
+                },
+                "private_settings": {}
+            }
+        ]
+    },
+    "mixers": 0,
+    "sync": 0,
+    "flags": 0,
+    "volume": 1,
+    "balance": 0.5,
+    "enabled": true,
+    "muted": false,
+    "push-to-mute": false,
+    "push-to-mute-delay": 0,
+    "push-to-talk": false,
+    "push-to-talk-delay": 0,
+    "hotkeys": {
+        "OBSBasic.SelectScene": [],
+        "libobs.show_scene_item.13": [],
+        "libobs.hide_scene_item.13": [],
+        "libobs.show_scene_item.6": [],
+        "libobs.hide_scene_item.6": [],
+        "libobs.show_scene_item.15": [],
+        "libobs.hide_scene_item.15": [],
+        "libobs.show_scene_item.14": [],
+        "libobs.hide_scene_item.14": []
+    },
+    "deinterlace_mode": 0,
+    "deinterlace_field_order": 0,
+    "monitoring_type": 0,
+    "private_settings": {}
+}

@@ -8,9 +8,13 @@ import {
 import { S4ObsConfig } from "./util/classes.ts";
 import { getNextEvent } from "./whiteboard.ts";
 import { SceneType } from "./util/types.ts";
+import { sceneTemplate } from "./obsSceneData.tsx";
+import { findSceneTemplate, templateName } from "./templateManagement.ts";
 
 export async function archiveCurrentS4SceneCollections() {
-  const currentSceneCollections = await getCurrentS4SceneCollections();
+  const currentSceneCollections = (await getCurrentS4SceneCollections()).filter(
+    (collection) => !collection.name.startsWith(templateName),
+  );
   currentSceneCollections.forEach((dirEntry) => {
     const fullPath = path.join(obsSceneCollectionFolder, dirEntry.name);
     const targetPath = path.join(
@@ -38,6 +42,7 @@ export async function getCurrentS4SceneCollections(): Promise<Deno.DirEntry[]> {
 function getSourceUrlFromSlot(slot: any) {
   switch (slot.stream_source_type) {
     case "RTMP":
+    case "VRCDN":
       return slot.stream_source_url;
     case "TWITCH":
       return `${slot.stream_source_url}/embed?frameborder="0"`;
@@ -48,21 +53,64 @@ function getSourceUrlFromSlot(slot: any) {
   }
 }
 
+async function saveSceneTemplateAsS4Template() {
+  const outputPath = path.join(
+    obsSceneCollectionFolder,
+    `${templateName}.json`,
+  );
+  // const templateConfig = {
+  //   sources: [scene],
+  // };
+  // await Deno.writeTextFile(outputPath, JSON.stringify(templateConfig, null, 2));
+
+  const templateFilePath = path.join(
+    obsSceneCollectionFolder,
+    "./template/Sunday_Service-template.json",
+  );
+  const templateContent = await Deno.readTextFile(templateFilePath);
+  await Deno.writeTextFile(outputPath, templateContent);
+
+  console.log(`Saved ${templateName} to ${outputPath}`);
+}
+
 export async function generateSceneCollectionFromWhiteboard() {
   const nextEventSlots = (await getNextEvent()).slots;
 
-  const output_path = path.join(
+  let templateScene = await findSceneTemplate();
+
+  if (!templateScene) {
+    const userResponse = prompt(
+      "S4-Template scene not found. Would you like to create one? (yes/no)",
+    );
+    if (userResponse?.toLowerCase() === "yes") {
+      const newTemplateScene = sceneTemplate(
+        { name: "Default Source", uuid: crypto.randomUUID() },
+        "S4-Template",
+      );
+      await saveSceneTemplateAsS4Template();
+      templateScene = newTemplateScene;
+    } else {
+      console.log("Using default base_config as the starting point.");
+    }
+  }
+
+  const outputPath = path.join(
     obsSceneCollectionFolder,
     `${sceneCollectionPrefix}-${Date.now().toString()}.json`,
   );
 
-  await Deno.create(output_path);
+  await Deno.create(outputPath);
 
   const s4Config = new S4ObsConfig(
     name = `S4VR (Generated ${new Date(Date.now()).toDateString()}-${
       new Date(Date.now()).toLocaleTimeString()
     })`,
   );
+
+  if (templateScene) {
+    s4Config.config.sources.push(templateScene);
+    console.log(`Using ${templateName} as the starting point.`);
+  }
 
   console.log(`Generating Scene Collection: ${s4Config.config.name}`);
 
@@ -75,10 +123,8 @@ export async function generateSceneCollectionFromWhiteboard() {
     );
   });
 
-  // We need to replace all asset paths from the template config with the user's actual working directory (independent of OS).
-  // We additionally need to escape all backslashes for Windows to keep valid JSON.
   await Deno.writeTextFile(
-    output_path,
+    outputPath,
     s4Config.getConfig().replaceAll(
       "%SCENE_ASSET_PATH%",
       s4vrSceneCollectionAssetsFolder.replaceAll("\\", "\\\\"),
